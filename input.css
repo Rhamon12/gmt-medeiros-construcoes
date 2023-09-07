@@ -150,7 +150,7 @@ dialog .close:hover {
 }
 
 #contact:visited {
-  color: #000;
+  color: #fff;
 }
 
 .nave {
@@ -166,9 +166,9 @@ dialog .close:hover {
 
 .nave h1 {
   font-weight: 600;
-
+  color: white;
   cursor: pointer;
-  color: #000;
+
   transition: ease-in-out 0.3s;
 }
 
@@ -192,7 +192,7 @@ dialog .close:hover {
 
 .nave ul li a {
   position: relative; /* Adiciona posicionamento relativo */
-  color: #000;
+  color: #fff;
   font-weight: bold;
   transition: ease-in-out 0.2s;
 }
@@ -206,7 +206,7 @@ dialog .close:hover {
   transform: translateX(-50%); /* Centraliza horizontalmente */
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #fff;
   transition: width 0.2s ease-in-out;
 }
 
@@ -217,7 +217,7 @@ dialog .close:hover {
 .nave ul li a:hover {
   font-weight: 600;
   font-size: 20px;
-  color: black;
+  color: #fff;
 }
 
 
@@ -568,7 +568,7 @@ dialog .close:hover {
 
 .contato span a {
   text-decoration: none;
-  color: #212529;
+  color: #fff;
   font-weight: bold;
 }
 
