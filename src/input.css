@@ -118,12 +118,18 @@ dialog {
 dialog span a {
   user-select: none;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   font-weight: bold;
   font-size: 18px;
-  border: 1px solid #4d78b6;
+  background-color:  #185ab6;
   border-radius: 5px;
   padding: 10px;
+  transition: ease-in-out .3s;
+}
+
+dialog span a:hover{
+  color: #fff;
+  
 }
 
 dialog .close {
@@ -568,8 +574,5 @@ dialog .close:hover {
 
 
 
-/*Media Querie*/
+/*Media Querie em andamento*/
 
-/* @media only screen and (max-device-width: 900px) {
-  .nav { width:100vw; }
-  } */
