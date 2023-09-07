@@ -1,0 +1,575 @@
+
+
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Roboto:wght@300;400;700&display=swap");
+
+
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+
+  background-color: #ddddde;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Pattern Content*/
+.pattern-content img {
+  width: 40%;
+
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0px #000;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.pattern-content img:hover {
+  transform: scale(1.02); /* Faz a imagem crescer em 110% */
+  box-shadow: 0 0 10px 2px #000; /* Aumenta a sombra para dar destaque */
+}
+.pattern-content {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.pattern-content h1 {
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.pattern-content p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+
+
+/* To the top button*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--Blue);
+  text-decoration: none;
+  z-index: 10;
+}
+.btn::after {
+  content: "↑";
+  font-size: 32px;
+  font-weight: bold;
+  color: aliceblue;
+  transition: margin-top 250ms;
+}
+.btn:hover::after {
+  margin-top:-8px;
+}
+
+/* HEADER */
+
+dialog::backdrop {
+  background-color: rgba(44, 44, 44, 0.26);
+}
+
+dialog {
+
+  font-family: "Nunito", sans-serif;
+  border-radius: 7px;
+  border-style: none;
+
+  padding: 3rem;
+  background-color: #63a7d3;
+  box-shadow: 0 0 10px 0px #000;
+  text-align: center;
+}
+
+dialog span a {
+  user-select: none;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #4d78b6;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+dialog .close {
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #4f7ab5;
+  border: 1px solid #4d78b6;
+  border-radius: 5px;
+  padding: 10px;
+  transition: ease-in-out .2s;
+}
+
+dialog .close:hover {
+  transform: scale(1.1);
+  color: #000;
+  font-weight: bold;
+}
+
+#contact:visited {
+  color: #000;
+}
+
+.nave {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  background-color: #63a7d3;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #4d78b6 100%);
+
+  height: 80px;
+}
+
+.nave h1 {
+  font-weight: 600;
+
+  cursor: pointer;
+  color: #000;
+  transition: ease-in-out 0.3s;
+}
+
+
+.nave ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  
+  width: 50%;
+}
+
+.nave ul li {
+  cursor: pointer;
+  width: 100px;
+  flex-grow: 1;
+
+}
+
+.nave ul li a {
+  position: relative; /* Adiciona posicionamento relativo */
+  color: #000;
+  font-weight: bold;
+  transition: ease-in-out 0.2s;
+}
+
+/* Adiciona um pseudo-elemento para criar a animação */
+.nave ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* Move o pseudo-elemento abaixo do elemento pai */
+  left: 50%; /* Posiciona o início do border no centro */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.2s ease-in-out;
+}
+
+.nave ul li a:hover::before {
+  width: 100%; /* Amplia o border até a largura do elemento pai */
+}
+
+.nave ul li a:hover {
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+}
+
+
+/* Content Sobre */
+
+.content {
+  display: flex;
+
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.sobre {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("/assets/construcao-ponte.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.sobre-img {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.sobre-content {
+  position: relative;
+  width: 50%;
+  background-color: #0000006e;
+  margin: 3rem auto auto 1rem;
+  z-index: 2;
+  text-align: left;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.sobre-content h1 {
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.sobre-content p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Content Projetos */
+
+
+
+.projetos {
+  display: flex;
+  text-align: right;
+  height: 100vh;
+  gap: 2rem;
+  background-color: rgb(30, 57, 75);
+  padding: 2rem;
+  color: white;
+
+}
+
+.projetos-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+#projeto-texto {
+  max-width: 100%;
+  max-height: 500px; /* Defina a altura máxima desejada */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+  
+}
+
+.slide-icon {
+  position: absolute; /* Posicione os ícones dentro do contexto */
+  bottom: 0;
+  right: 0; /* Alinhe os ícones à direita */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 3rem;
+  align-items: flex-end;
+}
+
+.slide-icon span {
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  width: 80px;
+  height: 80px;
+  transition: ease-in-out 0.2s;
+}
+
+.slide-icon span:hover {
+  font-size: 3.2rem;
+}
+
+/* Slide*/
+
+/* Adicionar transições suaves para opacidade e transformação */
+#projeto-imagem {
+  max-width: 100%;
+
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Definir opacidade inicial como zero para ocultar a imagem */
+#projeto-imagem {
+  opacity: 1;
+  transform: scale(0.1); /* Reduzir a escala inicialmente */
+}
+
+
+
+
+/* Sistema*/
+
+.sistema {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background: url("/assets/system-develop.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+  opacity: 0.98;
+}
+
+.system-content h1 {
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  background-color: #0000006e;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 4rem;
+  color: rgb(243, 243, 243);
+}
+
+/*cards*/
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10rem;
+  padding-bottom: 5rem;
+  line-height: 1.5;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgb(30, 57, 75);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 0.2rem;
+  max-width: 280px;
+  align-self: center;
+  height: 300px;
+  padding: 1rem;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  text-align: left;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.card p {
+  padding-top: 5px;
+  height: 90%;
+}
+
+.card img {
+
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.first-card {
+  border-top: 3px solid var(--Cyan);
+}
+
+.second-card {
+  border-top: 3px solid var(--Red);
+}
+
+.three-card {
+  border-top: 3px solid var(--Orange);
+}
+
+.end-card {
+  border-top: 3px solid var(--Blue);
+}
+
+@media (max-width: 1000px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+/* Evento */
+
+
+
+.evento {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #1d3b4f;
+  height: 100vh;
+
+}
+
+.evento-content h1 {
+
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 4rem;
+  color: rgb(243, 243, 243);
+}
+
+.evento-content img {
+  height: 600px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  transition: ease-in-out .5s;
+}
+
+.evento-content img:hover {
+  transform: scale(1.01);
+  object-fit: cover;
+}
+
+#carouselExampleControls {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  align-items: center;
+
+  background-color: #0000006e;
+  border-radius: 10px;
+
+}
+
+.carousel-inner{
+  width: 80%;
+
+  object-fit: cover;
+  height: 700px;
+  padding-top: 3rem;
+  margin: 0 auto;
+}
+
+/* Mova os botões "Anterior" e "Próximo" para a parte inferior */
+.carousel-control-prev,
+.carousel-control-next {
+  top: auto;
+  bottom: 15px; /* Ajuste essa margem inferior conforme necessário */
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 1rem;
+
+}
+
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+ /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Ajuste o tamanho dos ícones dos botões "Anterior" e "Próximo" */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px; /* Ajuste o tamanho desejado */
+  height: 40px; /* Ajuste o tamanho desejado */
+}
+
+/* Estilo personalizado para as legendas */
+.carousel-caption {
+  background: #0000006e; /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento de texto */
+  border-radius: 8px;
+}
+
+/* Estilo para os indicadores do carrossel */
+.carousel-indicators {
+  bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+}
+
+.carousel-indicators li {
+  background-color: #ffffffb4; /* Cor de fundo dos indicadores inativos */
+  /* Borda dos indicadores inativos */
+  width: 30px; /* Largura dos indicadores inativos */
+  height: 5px; /* Altura dos indicadores inativos */
+  margin-right: 5px; /* Espaçamento entre os indicadores inativos */
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #000; /* Cor de fundo do indicador ativo */
+  border-color: #000; /* Cor da borda do indicador ativo */
+}
+
+
+/* Footer */
+
+.contato {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  background-color: #63a7d3;
+  background-image: linear-gradient(135deg, #517b96 0%, #4d78b6 100%);
+  height: 50px;
+  border-radius: 5px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+}
+
+.contato span a {
+  text-decoration: none;
+  color: #212529;
+  font-weight: bold;
+}
+
+
+
+/*Media Querie*/
+
+/* @media only screen and (max-device-width: 900px) {
+  .nav { width:100vw; }
+  } */
