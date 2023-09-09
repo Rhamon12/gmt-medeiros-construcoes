@@ -14,8 +14,8 @@
   <body>
     
     <div id="container">
-      <header class="nave ">
-        <h1 >G M T Medeiros Construções</h1>
+      <header class="nave">
+        <h1 id="pageTitle">G M T Medeiros Construções</h1>
         <ul class="ul-nave list-unstyled d-flex mb-0">
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
@@ -30,7 +30,8 @@
         <span >E-mail <a href="mailto:sistemas_gmt@hotmail.com? subject = sistemas_gmt@hotmail.com ">sistemas_gmt@hotmail.com</a></span>
         <button class="close">Fechar</button>
       </dialog>
-      <a href="#" class="btn"></a>
+      <a href="#" class="btn" id="scrollToTopBtn"></a>
+      
       <!-- <header class="nave">
         <h1>G M T Medeiros Construções</h1>
         <ul class="ul-nave">
@@ -43,11 +44,7 @@
       </header> -->
       <main class="content">
         <section id="sobre" class="sobre">
-          <!-- <img
-            class="sobre-img"
-            src="assets/construcao-ponte.jpg"
-            alt="man-at-work"
-          /> -->
+
           <div class="sobre-content">
             <h1>Quem somos</h1>
             <p>
@@ -75,10 +72,7 @@
           <img src="../assets/placa-solar.jpg" alt="solar-board" id="projeto-imagem" />
           <div class="projetos-content">
             <h1>Nossos projetos</h1>
-        
             <div class="slide">
-      
-
               <p id="projeto-texto">Texto do Slide 1</p>
               <!-- Adicione mais slides conforme necessário -->
             </div>
@@ -88,37 +82,38 @@
             </div>
           </div>
         </section>
-
+        
         <section id="sistema" class="sistema">
           <div class="system-content">
             <h1>SIE - Sistema Integrado Empresarial</h1>
+            <div class="cards">
+              <div class="first-card card">
+                <h2>Qualidade</h2>
+                <p>Temos toda a qualidade necessária para a sua gestão aqui</p>
+                <img  src="/assets/system-pc.png" alt="qualidade" />
+              </div>
+              <div class="second-card card">
+                <h2>Análise</h2>
+                <p>Melhor análise, gera bons resultados e isso é um dos pontos que mais priorizamos em nosso sistema</p>
+                <img src="/assets/system-analytic.png" alt="analise" />
+              </div>
+              <div class="three-card card">
+                <h2>Integração</h2>
+                <p>Tudo em um só lugar, você terá acesso a tudo unicamente em nosso software</p>
+                <img src="/assets/system-integration.png" alt="integração" />
+              </div>
+              <div class="end-card card">
+                <h2>Segurança</h2>
+                <p>Segurança é primordial hoje em dia e esse é um dos nossos lemas, seus dados estarão protegidos e muito bem admnistrados</p>
+                <img src="/assets/system-security.png" alt="segurança" />
+              </div>
+  
+              <!-- <img src="images/icon-team-builder.svg" alt="Team-builder" />
+              <img src="images/icon-karma.svg" alt="Karma" />
+            <img src="images/icon-calculator.svg" alt="Calculator" /> -->
+            </div>
           </div>
-          <div class="cards">
-            <div class="first-card card">
-              <h2>Qualidade</h2>
-              <p>Temos toda a qualidade necessária para a sua gestão aqui</p>
-              <img  src="/assets/system-pc.png" alt="qualidade" />
-            </div>
-            <div class="second-card card">
-              <h2>Análise</h2>
-              <p>Melhor análise, gera bons resultados e isso é um dos pontos que mais priorizamos em nosso sistema</p>
-              <img src="/assets/system-analytic.png" alt="analise" />
-            </div>
-            <div class="three-card card">
-              <h2>Integração</h2>
-              <p>Tudo em um só lugar, você terá acesso a tudo unicamente em nosso software</p>
-              <img src="/assets/system-integration.png" alt="integração" />
-            </div>
-            <div class="end-card card">
-              <h2>Segurança</h2>
-              <p>Segurança é primordial hoje em dia e esse é um dos nossos lemas, seus dados estarão protegidos e muito bem admnistrados</p>
-              <img src="/assets/system-security.png" alt="segurança" />
-            </div>
 
-            <!-- <img src="images/icon-team-builder.svg" alt="Team-builder" />
-            <img src="images/icon-karma.svg" alt="Karma" />
-          <img src="images/icon-calculator.svg" alt="Calculator" /> -->
-          </div>
         </section>
         <section id="evento" class="evento">
           <div class="evento-content">

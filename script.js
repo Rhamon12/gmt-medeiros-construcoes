@@ -63,3 +63,48 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Função para lidar com a rolagem suave
+function scrollToElement(element) {
+  window.scrollTo({
+    behavior: 'smooth',
+    top: element.offsetTop - 50, // Subtrai a altura do cabeçalho
+  });
+}
+
+// Selecione todos os links âncora com o atributo href começando com #
+const links = document.querySelectorAll('a[href^="#"]');
+
+// Adicione um evento de clique a cada link
+links.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Evita o comportamento padrão do link
+    const targetId = link.getAttribute('href').substring(1); // Remove o #
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      scrollToElement(targetElement);
+    }
+  });
+});
+
+
+// Função para rolar suavemente para o topo da página
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Selecione o botão "scroll-to-top" pelo ID
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Adicione um evento de clique ao botão
+scrollToTopBtn.addEventListener('click', scrollToTop);
+
+
+// Selecione o elemento <h1> pelo ID
+const pageTitle = document.getElementById('pageTitle');
+
+// Adicione um evento de clique ao <h1> e chame a função scrollToTop()
+pageTitle.addEventListener('click', scrollToTop);
