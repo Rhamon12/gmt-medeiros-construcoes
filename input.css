@@ -237,6 +237,7 @@ dialog .close:hover {
   .nave {
     flex-direction: column;
     height: auto;
+
   }
 
   .nave h1 {
@@ -249,13 +250,21 @@ dialog .close:hover {
     margin-right: 2%;
   }
 
-  .nave ul li {
-    width: auto;
-
+  .nave ul li.nav-item {
+    margin-right: 0px;
+ 
   }
+
+  .nave ul li a.nav-link {
+    padding: 0.3rem;
+    
+  }
+
+
 
   .nave ul li a {
     font-size: 14px;
+
   }
   .nave ul li a:hover {
     font-size: 14px;
