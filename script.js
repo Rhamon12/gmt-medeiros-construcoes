@@ -25,12 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Array com os conteúdos dos slides
   const slides = [
     {
-      imagem: "../assets/placa-solar.jpg",
-      texto: "Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide 1Texto do Slide ",
+      imagem: "../assets/infraestrutura.jpg",
+      titulo: "Oportunidades na Infraestrutura Viária",
+      texto: "Se você é apaixonado por infraestrutura viária e deseja contribuir para a melhoria das estradas, temos estágios disponíveis para trabalhar em desafios como buracos, crateras, alagamentos, passagens molhadas, galerias de águas pluviais e bacias de captação, com uma remuneração de R$ 3.000,00.",
     },
     {
-      imagem: "../assets/placa-solar2.jpg",
-      texto: "Texto do Slide 2",
+      imagem: "../assets/big-construction.jpg",
+      titulo: "Desafios em Grandes Construções",
+      texto: "Se você é um entusiasta das grandes construções e deseja ganhar experiência em projetos de pontes e estruturas impressionantes, oferecemos estágios com uma remuneração competitiva de R$ 4.500,00.",
+    },
+    {
+      imagem: "../assets/construcao.jpg",
+      titulo: "Projetos de Engenharia e Arquitetura em REVIT",
+      texto: "Se você é fascinado pelo mundo do design e da modelagem tridimensional, temos estágios emocionantes na área de projetos de engenharia e arquitetura em REVIT, com uma remuneração de R$ 4.500,00.",
     },
     // Adicione mais slides conforme necessário
   ];
@@ -44,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     setTimeout(() => {
       projetoImagem.src = slides[index].imagem;
-      projetoTexto.textContent = slides[index].texto;
+      projetoTexto.innerHTML = `<h2>${slide.titulo}</h2><p>${slide.texto}</p>`;
       projetoImagem.classList.add("fade-in");
       projetoImagem.style.transform = "scale(1)";
     }, 300); // 300ms é o mesmo tempo que a duração da transição CSS

@@ -233,7 +233,7 @@ dialog .close:hover {
 }
 
 /* Estilos para telas menores (tablet e celular) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 668px) {
   .nave {
     flex-direction: column;
     height: auto;
@@ -339,7 +339,7 @@ dialog .close:hover {
   line-height: 1.5;
   font-weight: 500;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 668px) {
   /*SOBRE*/
 
   .sobre-content {
@@ -373,7 +373,11 @@ dialog .close:hover {
   height: 100vh;
 
 }
-
+.projetos h2 {
+  font-size: 2rem;
+  color: #4d78b6;
+  font-weight: bold;
+}
 .projetos-content {
   width: 100%;
 }
@@ -405,7 +409,7 @@ dialog .close:hover {
 
 /* Media Query para telas menores (por exemplo, tablets e celulares) */
 
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 819px) {
   .projetos {
     display: flex;
     flex-direction: column-reverse;
@@ -417,6 +421,11 @@ dialog .close:hover {
     flex-direction: column;
     min-height: 200px;
     overflow: auto;
+  }
+
+  .projetos h1, h2 {
+    font-size: 2rem;
+    color: white;
   }
 
   #projeto-imagem {
@@ -433,7 +442,7 @@ dialog .close:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 668px) {
   .projetos {
     flex-direction: column-reverse;
     margin: 0 auto;
@@ -447,9 +456,13 @@ dialog .close:hover {
     padding: 0;
   }
 
-  .projetos h1 {
+  .projetos h1, h2 {
     font-size: 2rem;
+    color: white;
   }
+
+
+
   #projeto-imagem {
     width: 100%;
     height: 100vh;
@@ -506,6 +519,10 @@ dialog .close:hover {
   line-height: 1.5;
 }
 
+.cards h2 {
+  color: rgb(243, 243, 243);
+}
+
 .card {
   background-color: rgb(30, 57, 75);
   color: white;
@@ -532,7 +549,7 @@ dialog .close:hover {
 }
 
 /* Media Query para telas menores (por exemplo, celulares) */
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 675px) {
 
 
   .sistema h1 {
@@ -670,7 +687,7 @@ dialog .close:hover {
 }
 
 
-@media screen and (max-width: 775px) { 
+@media screen and (max-width: 675px) { 
   #evento {
     display: flex;
     justify-content: center;
@@ -741,6 +758,19 @@ dialog .close:hover {
 }
 
 
+.edital {
+  display: flex;
+  padding-top: 10rem;
+  flex-direction: column;
+
+  padding-left: 5rem;
+}
+
+.edital h1, h2 {
+  color: red;
+}
+
+ 
 
 /*Media Querie em andamento*/
 
