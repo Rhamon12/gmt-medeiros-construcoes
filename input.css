@@ -296,7 +296,37 @@ dialog .close:hover {
 }
 /* Content Sobre */
 
+.galery-section {
+  width: 75%;
+  height: 78%;
 
+  display: flex;
+  padding: 2rem;
+  margin-right: 2rem;
+}
+
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  justify-content: center;
+
+}
+
+.galery img {
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+  transition: ease-in-out .2s;
+}
+
+.galery img:hover{
+  width: 270px;
+  height: 310px;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.472);
+}
 
 .sobre {
   height: 100vh;
@@ -306,6 +336,7 @@ dialog .close:hover {
   background-attachment: fixed;
   background-size: cover;
   object-fit: cover;
+  gap: 1em;
 }
 
 .sobre-img {
